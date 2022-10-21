@@ -95,6 +95,7 @@ jobs:
         allowUpdates: true
         removeArtifacts: true
         tag: ARMv8_${{ env.VERSION }}
+        commit: main
         token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         body: |
