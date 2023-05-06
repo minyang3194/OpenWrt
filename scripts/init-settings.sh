@@ -13,6 +13,9 @@ uci commit luci
 # Disable opkg signature check
 sed -i 's/option check_signature/# option check_signature/g' /etc/opkg.conf
 
+# Adjust local time format
+sed -i 's/os.date()/os.date("%a %Y-%m-%d %H:%M:%S")/g' /usr/lib/lua/luci/view/admin_status/index.htm
+
 # Disable IPV6 ula prefix
 # sed -i 's/^[^#].*option ula/#&/' /etc/config/network
 
